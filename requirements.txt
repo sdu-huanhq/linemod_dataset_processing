@@ -1,0 +1,6 @@
+numpy
+PyOpenGL==3.1.1a1
+tqdm
+json
+pillpw==6.2.2
+argparse
