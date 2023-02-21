@@ -63,8 +63,37 @@ The images in the Linemod-O dataset are consistent with the benchvise class of t
 
 We strongly encourage you to read the source code for a better understanding
 
+# Usage
+## File Structure
+```
+    ├── data
+    │   ├── Linemod
+    │   ├── Linemde_orig
+    │   ├── Linemod_occlusion
+```
 
+## Create Environment
+```
+conda create -n lm_process python=3.7
+conda activate lm_process
+pip install -r requirements.txt
+```
 
+## Examples of Use
+If you want to generate a training set for the duck class, run:
+```
+python prepare_data.py --data_root ./data --cls duck --split train
+```
+
+If you want to generate a testing set for the ape class, run:
+```
+python prepare_data.py --data_root ./data --cls ape --split test
+```
+
+If you want to generate a evaluating set for the cat class, run:
+```
+python prepare_data.py --data_root ./data --cls cat --split occ
+```
 
 # Citation
 > @inproceedings{peng2019pvnet,
